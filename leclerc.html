@@ -1,261 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Charles Leclerc | CL16</title>
+<title>Charles Leclerc</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syncopate:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
---ferrari:#ff1e00;
---dark:#050505;
---glass:rgba(255,255,255,0.05);
---border:rgba(255,255,255,0.1);
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-
-font-family:'Inter',sans-serif;
-
-background:
-radial-gradient(circle at 10% 10%, rgba(255,0,0,0.2), transparent 40%),
-radial-gradient(circle at 90% 80%, rgba(255,30,0,0.15), transparent 40%),
-#050505;
-
+margin:0;
+font-family:Inter;
+background:black;
 color:white;
-overflow-x:hidden;
-
-}
-
-/* NAVBAR */
-
-nav{
-
-position:fixed;
-top:0;
-width:100%;
-
-padding:25px 8%;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(12px);
-
-border-bottom:1px solid var(--border);
-
-z-index:999;
-
-}
-
-nav h1{
-
-font-family:'Syncopate';
-letter-spacing:4px;
-
-}
-
-nav span{
-color:var(--ferrari);
-}
-
-nav ul{
-
-list-style:none;
-display:flex;
-gap:40px;
-
-}
-
-nav a{
-
-text-decoration:none;
-color:#aaa;
-font-size:0.8rem;
-letter-spacing:2px;
-transition:.3s;
-
-}
-
-nav a:hover{
-color:var(--ferrari);
 }
 
 /* HERO */
 
 .hero{
 
-height:110vh;
+height:100vh;
+
+background:
+linear-gradient(to bottom,rgba(0,0,0,0.2),black),
+url("https://sportal.eu/wp-content/uploads/2025/10/charles_leclerc-13.webp")
+center/cover no-repeat;
 
 display:flex;
 align-items:center;
-
-padding:0 10%;
-
-background:
-
-linear-gradient(to right,
-rgba(0,0,0,0.95) 40%,
-rgba(0,0,0,0.6) 70%,
-transparent),
-
-url("https://images.unsplash.com/photo-1542367597-8849eb950fd8") right/contain no-repeat;
+justify-content:center;
+text-align:center;
 
 }
 
-.hero-content{
+.hero h1{
 
-max-width:600px;
-
-}
-
-.hero p{
-
-color:var(--ferrari);
-letter-spacing:3px;
-text-transform:uppercase;
-font-weight:700;
+font-family:Syncopate;
+font-size:90px;
+letter-spacing:8px;
 
 }
 
-.hero h2{
-
-font-family:'Syncopate';
-font-size:6rem;
-line-height:1;
-
-}
-
-.outline{
-
-color:transparent;
--webkit-text-stroke:1px white;
-
-}
-
-/* SECTION */
+/* SECTIONS */
 
 section{
 
-padding:140px 10%;
+padding:120px 12%;
+max-width:1200px;
+margin:auto;
 
 }
 
-.section-title{
+h2{
 
-font-family:'Syncopate';
-font-size:2.4rem;
-margin-bottom:70px;
-
-display:flex;
-align-items:center;
-gap:20px;
+font-family:Syncopate;
+font-size:36px;
+margin-bottom:40px;
 
 }
 
-.section-title::after{
+/* INFO GRID */
 
-content:"";
-flex:1;
-height:2px;
+.info{
 
-background:linear-gradient(to right,var(--ferrari),transparent);
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
 
 }
 
-/* BIO */
+.info div{
 
-.bio{
+border-left:3px solid red;
+padding-left:20px;
 
-font-size:1.2rem;
-line-height:1.9;
+}
 
-max-width:900px;
+/* BIG IMAGE */
 
+.big-img{
+
+height:80vh;
+
+background-size:cover;
+background-position:center;
+
+margin:100px 0;
+
+}
+
+/* TEXT */
+
+.text{
+
+font-size:20px;
+line-height:1.8;
 color:#ccc;
-
-column-count:2;
-column-gap:60px;
-
-}
-
-/* STATS */
-
-.stats{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:30px;
-
-}
-
-.stat-box{
-
-padding:50px 30px;
-
-background:var(--glass);
-border:1px solid var(--border);
-
-transition:.4s;
-
-}
-
-.stat-box:hover{
-
-transform:translateY(-8px);
-border-color:var(--ferrari);
-
-}
-
-.stat-box h3{
-
-font-family:'Syncopate';
-font-size:3rem;
-
-}
-
-.stat-box p{
-
-color:#888;
-letter-spacing:2px;
-
-}
-
-/* TROPHIES */
-
-.trophies{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-}
-
-.trophy{
-
-background:var(--glass);
-
-padding:40px;
-
-border:1px solid var(--border);
 
 }
 
@@ -263,86 +107,32 @@ border:1px solid var(--border);
 
 .timeline{
 
-max-width:900px;
-
-display:grid;
-gap:40px;
-
-}
-
-.timeline-item{
-
-border-left:3px solid var(--ferrari);
-
+border-left:3px solid red;
 padding-left:30px;
 
 }
 
-.timeline-item span{
+.timeline div{
 
-color:var(--ferrari);
-font-weight:bold;
+margin-bottom:40px;
 
 }
 
-/* GALERIA */
+/* GALLERY */
 
 .gallery{
 
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:25px;
+gap:20px;
 
 }
 
 .gallery img{
 
 width:100%;
-height:260px;
-
+height:320px;
 object-fit:cover;
-
-transition:.4s;
-
-}
-
-.gallery img:hover{
-
-transform:scale(1.05);
-
-}
-
-/* FOOTER */
-
-footer{
-
-padding:80px;
-
-text-align:center;
-
-border-top:1px solid var(--border);
-
-color:#555;
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h2{
-font-size:3rem;
-}
-
-.bio{
-column-count:1;
-}
-
-nav ul{
-display:none;
-}
 
 }
 
@@ -352,159 +142,163 @@ display:none;
 
 <body>
 
-<nav>
-
-<h1>CL<span>16</span></h1>
-
-<ul>
-
-<li><a href="#sobre">Perfil</a></li>
-<li><a href="#stats">Estatísticas</a></li>
-<li><a href="#timeline">Carreira</a></li>
-<li><a href="#gallery">Galeria</a></li>
-
-</ul>
-
-</nav>
-
 
 <!-- HERO -->
 
 <div class="hero">
 
-<div class="hero-content">
-
-<p>Scuderia Ferrari Driver</p>
-
-<h2>
-
-CHARLES <br>
-<span class="outline">LECLERC</span>
-
-</h2>
-
-</div>
+<h1>CHARLES LECLERC</h1>
 
 </div>
 
 
-<!-- SOBRE -->
+<!-- DRIVER -->
 
-<section id="sobre">
+<section>
 
-<h2 class="section-title">Perfil</h2>
+<h2>The Driver</h2>
 
-<div class="bio">
+<p class="text">
 
-Charles Leclerc nasceu em Monte Carlo, Mônaco, e se tornou um dos pilotos
-mais talentosos da Fórmula 1 moderna.
+Charles Leclerc was born in Monte Carlo on October 16, 1997.  
+He quickly became one of the most talented drivers of the modern Formula 1 era.
 
-Desde sua estreia na categoria em 2018, Leclerc demonstrou velocidade
-impressionante em voltas de classificação e habilidade técnica em corrida.
+He debuted in Formula 1 in 2018 with Alfa Romeo Sauber and in 2019 joined Ferrari,
+realizing his childhood dream of racing for the most iconic team in motorsport.
 
-Ao ingressar na Ferrari, rapidamente se tornou o rosto da nova geração
-da equipe italiana.
+</p>
 
-Com vitórias históricas em circuitos como Spa e Monza, Leclerc consolidou
-seu nome entre os principais pilotos do grid.
+</section>
+
+
+<!-- GENERAL INFO -->
+
+<section>
+
+<h2>General Info</h2>
+
+<div class="info">
+
+<div>
+<h3>Birth</h3>
+<p>16 Oct 1997</p>
+</div>
+
+<div>
+<h3>Hometown</h3>
+<p>Monte Carlo</p>
+</div>
+
+<div>
+<h3>Team</h3>
+<p>Scuderia Ferrari</p>
+</div>
+
+<div>
+<h3>Number</h3>
+<p>16</p>
+</div>
 
 </div>
 
 </section>
 
 
-<!-- STATS -->
+<!-- IMAGE -->
 
-<section id="stats">
-
-<h2 class="section-title">Estatísticas</h2>
-
-<div class="stats">
-
-<div class="stat-box">
-<h3>8</h3>
-<p>Vitórias</p>
+<div class="big-img"
+style="background-image:url('https://midias.romanews.com.br/2025/08/02/charles-leclerc-da-ferrari-qglulw2a.jpg')">
 </div>
 
-<div class="stat-box">
-<h3>26</h3>
-<p>Poles</p>
-</div>
 
-<div class="stat-box">
-<h3>38</h3>
-<p>Pódios</p>
-</div>
+<!-- BEGINNINGS -->
 
-<div class="stat-box">
-<h3>1000+</h3>
-<p>Pontos</p>
-</div>
+<section>
 
-</div>
+<h2>Beginnings</h2>
+
+<p class="text">
+
+Charles started karting at just three years old.
+His passion quickly turned into a professional career,
+winning multiple kart championships before moving into single-seaters.
+
+</p>
 
 </section>
 
 
 <!-- TIMELINE -->
 
-<section id="timeline">
+<section>
 
-<h2 class="section-title">Linha do Tempo</h2>
+<h2>Career</h2>
 
 <div class="timeline">
 
-<div class="timeline-item">
-<h4><span>2018</span> — Estreia na F1</h4>
-<p>Debut pela Alfa Romeo Sauber.</p>
-</div>
+<div>
 
-<div class="timeline-item">
-<h4><span>2019</span> — Ferrari</h4>
-<p>Vitórias em Spa e Monza.</p>
-</div>
+<strong>2018</strong>
 
-<div class="timeline-item">
-<h4><span>2022</span> — Temporada competitiva</h4>
-<p>Múltiplas poles e liderança do campeonato no início da temporada.</p>
-</div>
-
-<div class="timeline-item">
-<h4><span>2024</span> — Vitória em Mônaco</h4>
-<p>Vitória histórica em casa.</p>
-</div>
+<p>Formula 1 debut with Alfa Romeo Sauber.</p>
 
 </div>
 
-</section>
+<div>
 
+<strong>2019</strong>
 
-<!-- GALERIA -->
+<p>Joined Ferrari and won at Spa and Monza.</p>
 
-<section id="gallery">
+</div>
 
-<h2 class="section-title">Galeria</h2>
+<div>
 
-<div class="gallery">
+<strong>2024</strong>
 
-<img src="https://images.unsplash.com/photo-1542367597-8849eb950fd8">
+<p>Historic victory at Monaco Grand Prix.</p>
 
-<img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6">
-
-<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
-
-<img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d">
+</div>
 
 </div>
 
 </section>
 
 
-<footer>
+<!-- IMAGE -->
 
-© 2026 CL16 Official Website
+<div class="big-img"
+style="background-image:url('https://external-preview.redd.it/the-race-ferrari-reveals-its-spec-a-plan-for-2026-f1-cars-v0-DjFyrSuteBynOcn5Fecu28uXqXDDjiXGE8ayOiYQhHs.jpeg?width=1080&crop=smart&auto=webp&s=85e29faa443414854d37c789597acfe7d0144c80');">
+</div>
 
-</footer>
+
+<!-- LIFE AS DRIVER -->
+
+<section>
+
+<h2>Life as a Driver</h2>
+
+<p class="text">
+
+Life in Formula 1 demands extreme physical and mental preparation.
+Drivers must endure high G-forces, intense heat, and constant concentration.
+
+Charles trains year-round with specialists to maintain peak performance.
+
+</p>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section>
+
+
+</div>
+
+</section>
+
 
 </body>
 </html>
