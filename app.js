@@ -12,3 +12,5 @@ app.get("/charles_leclerc", (req, res, next) => {
 app.get("/max_verstappen", (req, res, next) => {
     return res.status(200).sendFile("max.html", {root: './'});
 });
+
+module.exports = app;
