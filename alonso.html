@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fernando Alonso - Landing Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #004d44, #001f1c);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+}
+
+.hero img {
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,255,200,0.5);
+    transition: 0.4s;
+}
+
+.hero img:hover {
+    transform: scale(1.03);
+}
+
+.hero-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.2rem;
+    color: #00ffd5;
+}
+
+.hero-text h2 {
+    font-weight: 300;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.hero-text p {
+    max-width: 500px;
+    line-height: 1.7;
+}
+
+section {
+    padding: 70px 10%;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    color: #00ffd5;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.career {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 35px;
+}
+
+.card {
+    background: #181818;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.4s;
+    border: 1px solid rgba(0,255,200,0.2);
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0,255,200,0.25);
+}
+
+.card h3 {
+    color: #00ffd5;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #000;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 280px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Fernando Alonso</h1>
+            <h2>Piloto de Fórmula 1</h2>
+            <p>
+                Fernando Alonso é um dos maiores pilotos da história da Fórmula 1. 
+                Bicampeão mundial, conhecido por sua técnica refinada, inteligência estratégica 
+                e mentalidade extremamente competitiva, ele marcou gerações no automobilismo.
+            </p>
+        </div>
+    </div>
+</header>
+
+<section>
+    <h2 class="section-title">Biografia</h2>
+    <p style="max-width: 900px; margin: auto; line-height: 1.9; text-align: center;">
+        Nascido em 29 de julho de 1981, em Oviedo, Espanha, Fernando Alonso iniciou sua carreira no kart aos 3 anos de idade.
+        Estreou na Fórmula 1 em 2001 e conquistou seus títulos mundiais em 2005 e 2006.
+        Ao longo de sua trajetória, competiu por equipes como Renault, McLaren, Ferrari, Alpine e atualmente Aston Martin.
+        Além da Fórmula 1, venceu as 24 Horas de Le Mans e conquistou o Campeonato Mundial de Endurance (WEC).
+    </p>
+</section>
+
+<section>
+    <h2 class="section-title">Carreira</h2>
+    <div class="career">
+        <div class="card">
+            <h3>🏆 Títulos Mundiais</h3>
+            <p>Bicampeão da Fórmula 1 (2005 e 2006)</p>
+        </div>
+
+        <div class="card">
+            <h3>🏎 Equipes</h3>
+            <p>Renault, McLaren, Ferrari, Alpine e Aston Martin</p>
+        </div>
+
+        <div class="card">
+            <h3>🥇 Outras Conquistas</h3>
+            <p>Vencedor das 24 Horas de Le Mans e campeão do WEC</p>
+        </div>
+
+        <div class="card">
+            <h3>🔥 Legado</h3>
+            <p>Reconhecido como um dos pilotos mais talentosos e completos da história da Fórmula 1.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Landing Page Fernando Alonso
+</footer>
+
+</body>
+</html>
